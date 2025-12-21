@@ -1,0 +1,146 @@
+/* --- BASE & TYPOGRAPHIE --- */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: #f0f4f8; 
+    padding: 30px; 
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-container { max-width: 1200px; margin: 0 auto; }
+
+/* --- RECHERCHE --- */
+.search-box { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    background: white; 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+input { 
+    flex: 1; 
+    padding: 12px 20px; 
+    border: 2px solid #e0e6ed; 
+    border-radius: 8px; 
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus { border-color: #3498db; outline: none; }
+
+button { 
+    padding: 12px 30px; 
+    background: #2980b9; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover { background: #1a5276; transform: translateY(-1px); }
+
+/* --- DASHBOARD (GRAPHIQUES) --- */
+.dashboard-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1.5fr; /* Score | Courbe 2050 | CO2 */
+    gap: 20px; 
+    margin-bottom: 25px; 
+}
+
+.card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+    border-top: 4px solid #3498db;
+}
+
+.hidden { display: none; }
+
+/* Taille des graphiques */
+canvas { max-height: 280px !important; width: 100% !important; }
+
+.score-container { position: relative; width: 180px; margin: 0 auto; }
+.score-text { 
+    position: absolute; 
+    top: 55%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-weight: 800; 
+    font-size: 28px; 
+    color: #27ae60;
+}
+
+/* --- LE GRAND RAPPORT IA --- */
+.content-grid { 
+    display: grid; 
+    grid-template-columns: 1fr; /* Le rapport prend toute la largeur */
+    gap: 25px; 
+    margin-top: 25px; 
+}
+
+#contenuRapport {
+    font-size: 17px;
+    color: #2c3e50;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    white-space: pre-line; /* Garde les sauts de ligne du rapport */
+    border-left: 6px solid #2980b9;
+    text-align: justify;
+}
+
+/* Style des titres à l'intérieur du rapport généré par l'IA */
+#contenuRapport strong {
+    color: #1a5276;
+    display: block;
+    margin-top: 15px;
+    font-size: 19px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- ACTUALITÉS --- */
+#listeNews {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* News sur deux colonnes */
+    gap: 15px;
+}
+
+#listeNews li {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    border-left: 3px solid #bdc3c7;
+}
+
+/* --- LOADER --- */
+#loader { text-align: center; padding: 50px; font-weight: bold; color: #3498db; }
+
+#contenuRapport {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2c3e50;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    white-space: pre-wrap; /* Indispensable pour garder les paragraphes */
+    text-align: justify;
+    border-top: 8px solid #2980b9;
+}
+
+/* Style des titres automatiques (1., 2., etc) */
+#contenuRapport b, #contenuRapport strong {
+    display: block;
+    margin-top: 25px;
+    color: #1a5276;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+}
