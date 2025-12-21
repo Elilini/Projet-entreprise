@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse & Prévision 2050</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="chart.js"></script> 
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>🔍 Diagnostic Stratégique IA</h1>
+
+        <div class="search-box">
+            <input type="text" id="sirenInput" placeholder="Entrez le SIREN (ex: 542051180)">
+            <button onclick="lancerAnalyse()">Analyser</button>
+        </div>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Analyse des données et calcul des projections 2050...</p>
+        </div>
+
+        <div id="resultats" class="hidden">
+            
+            <header class="res-header">
+                <h2 id="titreEntreprise">Nom de l'entreprise</h2>
+                <p id="sourceDonnees">Source : --</p>
+            </header>
+
+            <div class="dashboard-grid">
+                
+                <div class="card mini-card">
+                    <h3>Score de Santé</h3>
+                    <div class="score-container">
+                        <canvas id="graphScore"></canvas>
+                        <div id="scoreValue" class="score-text">0%</div>
+                    </div>
+                </div>
+
+                <div class="card main-card">
+                    <h3>📈 Projection Croissance 2050</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="graphPrevision"></canvas>
+                    </div>
+                </div>
+
+                <div class="card mini-card">
+                    <h3>Répartition Budgétaire</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="graphPie"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <h3>📝 Rapport de l'IA (Mistral)</h3>
+                    <div id="contenuRapport" class="rapport-text"></div>
+                </div>
+
+                <div class="card">
+                    <h3>📰 Actualités Récentes</h3>
+                    <ul id="listeNews">
+                        </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
