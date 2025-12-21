@@ -1,13 +1,8 @@
-Pour que votre fichier README.md soit conforme aux exigences de votre projet et évite que votre code ne soit ignoré, il doit être structuré de manière professionnelle et contenir des instructions précises.
-
-Voici le modèle exact à copier et à adapter dans votre fichier :
-
 Projet Algorithmique L2 - Entreprise
 Membres du groupe :
+IDHAYAKUMAR Elilini -44011065
+YAYHA LABCHIRI Rania 440083
 
-[Ton Prénom] [Ton Nom] - Numéro étudiant : [Ton Numéro]
-
-[Prénom du Binôme] [Nom du Binôme] - Numéro étudiant : [Son Numéro]
 
 1. Structure du Dépôt
 src/ : Contient l'intégralité du code source (Backend et Frontend) sans aucune archive compressée.
