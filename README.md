@@ -64,7 +64,7 @@ python main.py
 
 ### Étape 3 : Lancer l'interface
 
-Ouvrir le fichier `frontend/index.html` dans un navigateur. On saisit un SIREN (par exemple 542051180) et on lance l'analyse.
+Ouvrir le fichier `frontend/index.html` dans un navigateur. On saisit un SIREN et on lance l'analyse.
 
 ---
 
