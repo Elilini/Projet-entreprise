@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Page de garde (Pagedegarde.tex)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+% --- Définitions des variables ---
+\def\@ecole{école}
+\newcommand{\ecole}[1]{\def\@ecole{#1}}
+
+\def\@entreprise{Nom de l'entreprise}
+\newcommand{\entreprise}[1]{\def\@entreprise{#1}}
+
+\def\@datedebut{\today}
+\newcommand{\datedebut}[1]{\def\@datedebut{#1}}
+
+\def\@datefin{\today}
+\newcommand{\datefin}[1]{\def\@datefin{#1}}
+
+\def\@specialite{Spécialité}
+\newcommand{\specialite}[1]{\def\@specialite{#1}}
+
+\def\@ED{\'{E}cole Doctorale}
+\newcommand{\ED}[1]{\def\@ED{#1}}
+
+\def\@doctorat{Doctorat}
+\newcommand{\doctorat}[1]{\def\@doctorat{#1}}
+
+\def\@adresse{Adresse}
+\newcommand{\adresse}[1]{\def\@adresse{#1}}
+
+\def\@directeur{directeur}
+\newcommand{\directeur}[1]{\def\@directeur{#1}}
+
+\def\@encadrant{encadrant}
+\newcommand{\encadrant}[1]{\def\@encadrant{#1}}
+
+% --- MEMBRES ---
+\def\@membrea{}
+\newcommand{\membrea}[1]{\def\@membrea{#1}}
+
+\def\@membreb{}
+\newcommand{\membreb}[1]{\def\@membreb{#1}}
+
+\def\@membrec{}
+\newcommand{\membrec}[1]{\def\@membrec{#1}}
+
+% --- JURY ---
+\def\@juryb{}{}{}
+\newcommand{\juryb}[3]{\def\@juryb{#1, & #2 & #3\\}}
+\def\@juryc{}{}{}
+\newcommand{\juryc}[3]{\def\@juryc{#1, & #2 & #3\\}}
+\def\@juryd{}{}{}
+\newcommand{\juryd}[3]{\def\@juryd{#1, & #2 & #3\\}}
+
+\makeatother
+
+% --- Images de fond ---
+\newcommand\BackgroundPic{%
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[height=0.45\paperheight]{bordure.png}%
+            \vfill
+        }
+    }
+}
+
+% --- Construction de la page ---
+\makeatletter
+\newcommand{\pagedegarde}{
+\newgeometry{top=2.5cm, bottom=1cm, left=2cm, right=1cm}
+\AddToShipoutPicture*{\BackgroundPic}
+
+  \begin{titlepage}
+  \centering
+      \includegraphics[width=0.6\textwidth]{logo_Paris_Nanterre_couleur_RVB.png}
+      \hfill
+      $\ $\\
+    \vspace{1cm}
+      {\Large Licence CMI deuxième année}\\
+    \vspace{1cm}
+      {\huge 
+        {\bfseries Rapport de projet informatique}\\
+    \vspace{0.5cm}}
+        $\ $\\
+    \vspace{1cm}
+        
+    \vspace{1cm}
+        {\huge\color[rgb]{0,0,1} \bfseries{\@title}}\\
+    \vspace{0.5cm}
+    
+    {\bfseries Projet réalisé du \@datedebut\ au \@datefin}\\
+    
+    % --- LIEN GITHUB PLACÉ ICI ---
+    \vspace{0.5cm}
+    \textbf{Lien GitHub :} 
+    \href{https://github.com/Elilini/Projet_entreprise}{https://github.com/Elilini/Projet\_entreprise}
+    % -----------------------------
+    
+    \vspace{2cm}
+    $\ $\\
+    \vspace{0.5cm}
+    $\ $\\
+    
+    \vfill
+
+    % --- AFFICHAGE DES MEMBRES COTE A COTE ---
+    {\large \bfseries Membres du groupe}\\[1cm]
+    
+    % Conteneur centré pour les deux membres
+    \noindent
+    \makebox[\textwidth]{
+        % --- MEMBRE 1 (Gauche) ---
+        \begin{minipage}[t]{0.40\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \draw[thick] (0,0) rectangle (3.5,4.5);
+                % Image 1
+                \node at (1.75, 2.25) {\includegraphics[width=3.3cm, height=4.3cm]{image1.png}}; 
+            \end{tikzpicture}\\
+            \vspace{0.3cm}
+            \textbf{\@membrea}
+        \end{minipage}%
+        \hfill % Pousse les éléments vers les bords
+        % --- MEMBRE 2 (Droite) ---
+        \begin{minipage}[t]{0.40\textwidth}
+            \centering
+            \begin{tikzpicture}
+                \draw[thick] (0,0) rectangle (3.5,4.5);
+                % Image 2
+                \node at (1.75, 2.25) {\includegraphics[width=3.3cm, height=4.3cm]{image2.jpg}};
+            \end{tikzpicture}\\
+            \vspace{0.3cm}
+            \textbf{\@membreb}
+        \end{minipage}
+    }
+
+    \vfill
+    
+  \end{titlepage}
+
+\restoregeometry  
+}
+\makeatother 
