@@ -6,7 +6,7 @@ Le système récupère les données d'identification, analyse le contexte actuel
 **Membres du groupe :**
 
 * IDHAYAKUMAR Elilini (44011065)
-* YAYHA LABCHIRI Rania (44008335)
+* YAHYA LABCHIRI Rania (44008335)
 
 ---
 
